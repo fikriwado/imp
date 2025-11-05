@@ -4,10 +4,11 @@ WORKDIR /var/www/html
 
 ARG USER=appuser
 
+RUN apk add --no-cache git unzip \
+    && docker-php-ext-install pdo pdo_mysql
+
 RUN addgroup -g 1000 ${USER} \
     && adduser -D -u 1000 -G ${USER} ${USER}
-
-RUN apk add --no-cache git unzip
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
