@@ -38,3 +38,9 @@ Proyek ini terdiri dari dua bagian utama:
 - Saya menggunakan axios dengan config interceptors request yang sudah disesuaikan apabila ada token makan akan di set Authorization
 - Saya juga menggunakan service yang mengimport axios sehingga handling by `endpoint` by `Service`
 - Saya menggunakan fake middleware untuk `client side` dengan membungkusnya sebagai component dan dijadikan chindren.
+
+## Docker
+
+- docker compose up -d
+
+Note: belum selesai karena waktu tidak cukup
