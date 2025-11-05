@@ -28,7 +28,7 @@ class PostService
 
     public function find($id)
     {
-        return Post::findOrFail($id);
+        return Post::with('user')->findOrFail($id);
     }
 
     public function update($request, $id)

@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import AppLayout from "../layouts/AppLayout";
 import postService from "@/services/postService";
-import userService from "@/services/userService";
 
 interface Post {
   id: number;
