@@ -30,7 +30,7 @@ export default function Register() {
           <input
             type="text"
             placeholder="Your name"
-            className="input input-bordered"
+            className="input input-bordered w-full"
             onChange={(e) => setForm({ ...form, name: e.target.value })}
           />
         </div>
@@ -42,7 +42,7 @@ export default function Register() {
           <input
             type="email"
             placeholder="email@example.com"
-            className="input input-bordered"
+            className="input input-bordered w-full"
             onChange={(e) => setForm({ ...form, email: e.target.value })}
           />
         </div>
@@ -54,7 +54,7 @@ export default function Register() {
           <input
             type="password"
             placeholder="••••••••"
-            className="input input-bordered"
+            className="input input-bordered w-full"
             onChange={(e) => setForm({ ...form, password: e.target.value })}
           />
         </div>

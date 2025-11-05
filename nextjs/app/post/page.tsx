@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import AppLayout from "../layouts/AppLayout";
 import postService from "@/services/postService";
+import userService from "@/services/userService";
 
 interface Post {
   id: number;
@@ -14,7 +15,7 @@ interface Post {
   thumbnail?: string;
 }
 
-export default function Login() {
+export default function Post() {
   const router = useRouter();
   const [posts, setPosts] = useState<Post[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
@@ -22,13 +23,12 @@ export default function Login() {
 
   const fetchPosts = async (page = 1) => {
     try {
-      const res = await postService.all({ page });
-      setPosts(res.data.result.posts.data);
-      setCurrentPage(res.data.result.posts.current_page);
-      setLastPage(res.data.result.posts.last_page);
+      const response = await postService.all({ page });
+      setPosts(response.data.result.posts.data);
+      setCurrentPage(response.data.result.posts.current_page);
+      setLastPage(response.data.result.posts.last_page);
     } catch (error) {
-      console.error(error);
-      alert("Failed to fetch posts");
+      console.error("Failed to fetch users", error);
     }
   };
 

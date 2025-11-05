@@ -28,7 +28,7 @@ export default function Login() {
           <input
             type="email"
             placeholder="email@example.com"
-            className="input input-bordered"
+            className="input input-bordered w-full"
             onChange={(e) => setForm({ ...form, email: e.target.value })}
           />
         </div>
@@ -40,7 +40,7 @@ export default function Login() {
           <input
             type="password"
             placeholder="••••••••"
-            className="input input-bordered"
+            className="input input-bordered w-full"
             onChange={(e) => setForm({ ...form, password: e.target.value })}
           />
         </div>
