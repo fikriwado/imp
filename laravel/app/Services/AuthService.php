@@ -18,7 +18,10 @@ class AuthService
 
         $user = Auth::user();
 
-        return $user->createToken('auth_token')->plainTextToken;
+        return [
+            'token_type' => 'Bearer',
+            'access_token' => $user->createToken('auth_token')->plainTextToken
+        ];
     }
 
     public function register($request)
