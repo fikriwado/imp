@@ -10,7 +10,7 @@ class PostService
 {
     public function all()
     {
-        return Post::fetch(true);
+        return Post::with('user')->fetch(true);
     }
 
     public function store($request)
